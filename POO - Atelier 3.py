@@ -3,12 +3,13 @@ class Voiture:
         self.matricule = matricule
         self.marque = marque
         self.couleur = couleur
+
     def afficher_infos(self):
         print("Matricule :", self.matricule)
         print("Marque :", self.marque)
         print("Couleur :", self.couleur)
-v1 = Voiture("E74YXZ", "kia", "rio")
-v1.afficher_infos()
+
+
 class Parc:
     def __init__(self, id, adresse, capacite, liste_voitures):
         self.id = id
@@ -20,5 +21,11 @@ class Parc:
         print("Adresse :", self.adresse)
         print("Capacite :", self.capacite)
         print("Liste des voitures :", self.liste_voitures)
-parc1 = Parc(230, "Boreal", 170, [])
-parc1.afficher_infos()
+    def entrerVoiture(self, voiture):
+        if voiture in self.liste_voitures:
+            print("La voiture existe deja dans le parc")
+        elif len(self.liste_voitures) >= self.capacite:
+            print("Le parc est plein")
+        else:
+            self.liste_voitures.append(voiture)
+            print("Voiture ajoutee au parc")

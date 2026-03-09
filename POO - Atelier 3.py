@@ -3,7 +3,6 @@ class Voiture:
         self.matricule = matricule
         self.marque = marque
         self.couleur = couleur
-
     def afficher_infos(self):
         print("Matricule :", self.matricule)
         print("Marque :", self.marque)
@@ -29,11 +28,12 @@ class Parc:
         else:
             self.liste_voitures.append(voiture)
             print("Voiture ajoutee au parc")
-            def sortirVoiture(self, voiture):
-                if voiture not in self.liste_voitures:
-                    print("La voiture n'est pas dans le parc")
-                else:
-                    self.liste_voitures.remove(voiture)
-                    print("Voiture retiree du parc")
-                    def calculerNbrPlacesLibres(self):
-                        return self.capacite - len(self.liste_voitures)
+    def sortirVoiture(self, voiture):
+        if voiture not in self.liste_voitures:
+            print("La voiture n'est pas dans le parc")
+        else:
+            self.liste_voitures.remove(voiture)
+            print("Voiture retiree du parc")
+    def calculerNbrPlacesLibres(self):
+        return self.capacite - len(self.liste_voitures)
+parc1 = Parc(230, "Boreal", 3, [])

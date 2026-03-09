@@ -9,3 +9,16 @@ class Voiture:
         print("Couleur :", self.couleur)
 v1 = Voiture("E74YXZ", "kia", "rio")
 v1.afficher_infos()
+class Parc:
+    def __init__(self, id, adresse, capacite, liste_voitures):
+        self.id = id
+        self.adresse = adresse
+        self.capacite = capacite
+        self.liste_voitures = liste_voitures
+    def afficher_infos(self):
+        print("ID :", self.id)
+        print("Adresse :", self.adresse)
+        print("Capacite :", self.capacite)
+        print("Liste des voitures :", self.liste_voitures)
+parc1 = Parc(230, "Boreal", 170, [])
+parc1.afficher_infos()
